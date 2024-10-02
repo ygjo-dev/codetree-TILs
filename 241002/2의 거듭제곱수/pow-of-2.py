@@ -1,8 +1,9 @@
-n = int(input())
-cnt = 0
+N=int(input())
 
-while n!=1:
-    n //= 2
-    cnt += 1
-    
+cnt=1
+while True:
+    N=N/2
+    cnt+=1
+    if N<=2:
+        break
 print(cnt)

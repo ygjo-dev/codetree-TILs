@@ -2,10 +2,10 @@ m=int(input())
 
 n=[]
 for _ in range(m):
-    cnt=0
     n.append(int(input()))
 
 for idx in range(len(n)):
+    cnt=0
     while True:
         if n[idx]%2==0:
             n[idx] /=2

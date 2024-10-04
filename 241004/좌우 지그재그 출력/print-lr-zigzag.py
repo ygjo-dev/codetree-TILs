@@ -8,6 +8,6 @@ for i in range(n):
             print(cnt,end=" ")
         if i%2!=0:
             if j==0:
-                cnt *=2
+                cnt +=n
             print(cnt-j,end=" ")
     print()

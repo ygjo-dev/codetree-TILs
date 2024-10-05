@@ -1,7 +1,10 @@
 arr=list(map(int,input().split()))
 
-for _ in range(len(arr)):
-    if arr[-1]==0:
-        arr.pop()
-        continue
-    print(arr.pop(),end=" ")
+idx=0
+for n in arr:
+    if n == 0:
+        break
+    idx+=1
+
+for n in arr[idx-1::-1]:
+    print(n,end=" ")

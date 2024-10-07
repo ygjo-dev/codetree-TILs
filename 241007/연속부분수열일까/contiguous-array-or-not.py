@@ -11,8 +11,9 @@ for a_idx in range(n1):
         b_idx+=1
     else:
         b_idx=0
-
-if b_idx==n2:
-    ans=True
+    
+    if b_idx==n2:
+        ans=True
+        break
 
 print("Yes" if ans else "No")

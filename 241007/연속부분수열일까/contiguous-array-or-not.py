@@ -14,7 +14,9 @@ for b in B:
             idx=A.index(b)        
         else:
             if b!=A[idx]:
-                ans=False
+                idx=-1
         idx+=1
+if idx==-1:
+    ans=False
 
 print("Yes" if ans else "No")

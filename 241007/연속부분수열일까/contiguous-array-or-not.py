@@ -5,18 +5,21 @@ B=list(map(int,input().split()))
 
 ans=True
 
-idx=-1
+prev_idx=-1
+curr_idx=-1
 for b in B:
     if b not in A:
         ans=False
     else:
-        if idx==-1:
-            idx=A.index(b)        
-        else:
-            if b!=A[idx]:
-                idx=-1
-        idx+=1
-if idx==-1:
-    ans=False
+        if curr_idx-1!=prev_idx:
+            curr_idx=A.index(b)   
+
+        if prev_idx>=0:
+            if b!=A[curr_idx]:
+                ans=False
+        
+        prev_idx=curr_idx
+        curr_idx+=1
+
 
 print("Yes" if ans else "No")

@@ -3,23 +3,16 @@ n1,n2=tuple(map(int,input().split()))
 A=list(map(int,input().split()))
 B=list(map(int,input().split()))
 
-ans=True
+ans=False
 
-prev_idx=-1
-curr_idx=-1
-for b in B:
-    if b not in A:
-        ans=False
+b_idx=0
+for a_idx in range(n1):
+    if B[b_idx] == A[a_idx]:
+        b_idx+=1
     else:
-        if curr_idx-1!=prev_idx:
-            curr_idx=A.index(b)   
+        b_idx=0
 
-        if prev_idx>=0:
-            if b!=A[curr_idx]:
-                ans=False
-        
-        prev_idx=curr_idx
-        curr_idx+=1
-
+if b_idx==n2:
+    ans=True
 
 print("Yes" if ans else "No")

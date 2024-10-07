@@ -15,6 +15,6 @@ for _ in range(q):
             print(arr.index(b)+1)
     elif question_arr[0]==3:
         s,e=question_arr[1], question_arr[2]
-        print(s,e)
-        #for n in arr[s-1:e]:
-        #    print(n, end=" ")
+        for n in arr[s-1:e]:
+            print(n, end=" ")
+        print()

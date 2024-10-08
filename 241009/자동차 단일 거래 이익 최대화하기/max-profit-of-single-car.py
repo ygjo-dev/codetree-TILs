@@ -2,21 +2,17 @@ import sys
 n=int(input())
 arr=list(map(int,input().split()))
 
-min_idx=0
 min_val=sys.maxsize
-for idx in range(n):
-    if arr[idx] < min_val:
-        min_val=arr[idx]
-        min_idx=idx
 
-max_idx=0
-max_val=-sys.maxsize
-for i in range(min_idx,n):
-    if arr[i] > max_val:
-        max_val=arr[i]
-        max_idx=i
+for i in range(n):
+    for j in range(i+1,n):
+        val=arr[i]-arr[j]
+        if val>0:
+            continue
+        if val<min_val:
+            min_val=val
 
-if max_idx>min_idx:
-    print(max_val-min_val)
-else:
+if min_val>=0:
     print(0)
+else:
+    print(min_val)

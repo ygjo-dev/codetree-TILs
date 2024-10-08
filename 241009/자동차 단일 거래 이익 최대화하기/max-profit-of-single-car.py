@@ -15,4 +15,4 @@ for i in range(n):
 if min_val>=0:
     print(0)
 else:
-    print(min_val)
+    print(min_val*-1)

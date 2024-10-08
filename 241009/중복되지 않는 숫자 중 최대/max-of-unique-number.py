@@ -15,4 +15,7 @@ for n in arr:
         if cnt==1:
             max_val=n
 
-print(max_val)
+if max_val==-sys.maxsize:
+    print(-1)
+else:
+    print(max_val)

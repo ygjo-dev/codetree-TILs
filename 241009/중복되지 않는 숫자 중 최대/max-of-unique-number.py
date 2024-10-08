@@ -6,8 +6,10 @@ new_arr=[]
 
 for idx in range(N):
     cnt=0
-    for n in arr[idx+1:]:
-        if arr[idx]==n:
+    for i in range(N):
+        if idx==i:
+            continue
+        if arr[idx]==arr[i]:
             cnt+=1
             break
     if cnt==0:

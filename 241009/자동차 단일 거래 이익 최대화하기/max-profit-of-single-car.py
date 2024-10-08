@@ -12,7 +12,7 @@ for idx in range(n):
 
 max_idx=0
 max_val=-sys.maxsize
-for idx in range(min_idx+1,n):
+for idx in range(min_idx,n):
     if arr[idx] > max_val:
         max_val=arr[idx]
         max_idx=idx

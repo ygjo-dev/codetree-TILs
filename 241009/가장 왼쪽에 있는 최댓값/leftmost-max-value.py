@@ -6,7 +6,7 @@ while True:
     max_val=arr[0]
     for n in arr[:max_idx]:
         if n>max_val:
-            max_val=N
+            max_val=n
     
     max_idx=arr.index(max_val)
 

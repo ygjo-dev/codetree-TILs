@@ -20,8 +20,6 @@ while True:
         if row > n-1:
             break
 
-        if arr2d[row][col] != 0:
-            continue  
     
     if main_col==m-1 and main_row < n-1:
         main_row+=1

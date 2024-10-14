@@ -1,28 +1,24 @@
 string=input()
 
-arr=[]
-cnt=0
+curr_char=""
+num_char=0
 
+save_string=""
+save_len=0
 for elem in string:
-    if len(arr)==0:
-        arr.append(elem)
-        cnt+=1
+    if curr_char=="":
+        curr_char=elem
+        num_char=1
         continue
-    if elem != arr[-1]:
-        arr.append(cnt)
-        arr.append(elem)
-        cnt=0
-    
-    if elem ==arr[-1]:
-        cnt+=1
-arr.append(cnt)
-
-ans=0
-for elem in arr:
-    if type(elem) != str:
-        ans+=len(str(elem))
+    if elem != curr_char:
+        save_len+=len(curr_char)+len(str(num_char))
+        save_string+= curr_char+str(num_char)
+        curr_char=elem
+        num_char=1
     else:
-        ans+=len(elem)
-print(ans)
-for elem in arr:
-    print(elem,end="")
+        num_char+=1
+
+save_len+=len(curr_char)+len(str(num_char))
+save_string+= curr_char+str(num_char)
+print(save_len)
+print(save_string)

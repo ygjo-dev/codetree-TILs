@@ -20,5 +20,5 @@ for elem in string:
 
 save_len+=len(curr_char)+len(str(num_char))
 save_string+= curr_char+str(num_char)
-print(save_len)
+print(len(save_string))
 print(save_string)

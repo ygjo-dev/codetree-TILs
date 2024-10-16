@@ -4,9 +4,6 @@ q=int(q)
 ans=list(string)
 for _ in range(q):
     question=int(input())
-    if len(ans)==1:
-        print(''.join(ans))
-        continue
 
     if question==1:
         ans=ans[1:]+[ans[0]]
